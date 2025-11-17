@@ -1,0 +1,1 @@
+A simple and efficient store management system designed for factory stores, warehouses, construction sites, and storage units. StoreKeeper helps you track items, manage quantities, and record check-in/check-out activities.# Staging
