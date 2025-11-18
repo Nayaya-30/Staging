@@ -20,7 +20,7 @@ const sections = [
 export default function PrivacyPolicyPage() {
   const [activeId, setActiveId] = useState<string>("introduction");
 
-  useEffect(() => {
+main(() => {
     if (typeof window === "undefined") return;
 
     const observer = new IntersectionObserver(
