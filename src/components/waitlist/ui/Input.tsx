@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { PRIMARY_COLOR } from "@/constants/colors";
+import { PRIMARY_COLOR } from "@/lib/constants";
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-}
+import { InputProps } from "../types";
+
+export type { InputProps };
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className = "", type = "text", ...props }, ref) => (

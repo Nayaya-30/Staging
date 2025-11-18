@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
-import { PRIMARY_COLOR } from "@/constants/colors";
+import { PRIMARY_COLOR } from "@/lib/constants";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  variant?: "primary" | "secondary";
-  children: React.ReactNode;
-}
+import { ButtonProps } from "../types";
+
+export type { ButtonProps };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className = "", variant = "primary", children, ...props }, ref) => {

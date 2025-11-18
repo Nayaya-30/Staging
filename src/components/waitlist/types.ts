@@ -1,42 +1,45 @@
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+import { IconType } from "react-icons";
+import { LucideIcon } from "lucide-react";
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   variant?: "primary" | "secondary";
   children: React.ReactNode;
 }
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
 }
 
-interface CardProps {
+export interface CardProps {
   children: React.ReactNode;
   className?: string;
 }
 
-interface IconCardProps {
+export interface IconCardProps {
   icon: LucideIcon | IconType;
   title: string;
   description: string;
   isBenefit?: boolean;
 }
 
-interface FAQItemProps {
+export interface FAQItemProps {
   question: string;
   answer: string;
 }
 
-interface CountdownProps {
+export interface CountdownProps {
   targetDate: Date;
 }
 
-interface CountdownState {
+export interface CountdownState {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
 }
 
-interface NavItemProps {
+export interface NavItemProps {
   children: React.ReactNode;
   href: string;
   className?: string;

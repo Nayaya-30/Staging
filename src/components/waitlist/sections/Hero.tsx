@@ -1,7 +1,22 @@
-export default function Hero() {
-	return (
-			<>
-				      <section className="py-12 md:py-24 text-center">
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { FaRocket as FaRocketAlt } from "react-icons/fa6";
+import { MdNotifications } from "react-icons/md";
+import { FaCalendarCheck } from "react-icons/fa6";
+import { HiUserGroup } from "react-icons/hi2";
+import Button from "@/components/waitlist/ui/Button";
+import { PRIMARY_COLOR } from "@/lib/constants";
+
+interface HeroProps {
+  handleScrollToJoin: () => void;
+}
+
+export default function Hero({ handleScrollToJoin }: HeroProps) {
+  return (
+    <>
+      <section className="py-12 md:py-24 text-center">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6">
           <div
             onClick={handleScrollToJoin}
@@ -42,12 +57,12 @@ export default function Hero() {
           <Button
             variant="primary"
             className={`
-    text-base sm:text-lg flex items-center mx-auto justify-center gap-2 
-    border border-transparent hover:cursor-pointer
-    hover:bg-white 
-    hover:text-[#800020] 
-    hover:border-[#800020]
-  `}
+              text-base sm:text-lg flex items-center mx-auto justify-center gap-2 
+              border border-transparent hover:cursor-pointer
+              hover:bg-white 
+              hover:text-[${PRIMARY_COLOR}] 
+              hover:border-[${PRIMARY_COLOR}]
+            `}
             onClick={handleScrollToJoin}
           >
             <MdNotifications />
@@ -98,6 +113,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-			</>
-		)
+    </>
+  );
 }
